@@ -1,0 +1,15 @@
+{
+  "name": "cypressteamsnotifications",
+  "version": "1.0.0",
+  "description": "With this example of cypress and Microsoft Teams integration, after your test runs are completed you can easily get the test result directly in your teams channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.4"
+  }
+}
