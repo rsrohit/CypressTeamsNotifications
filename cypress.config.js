@@ -4,16 +4,12 @@ module.exports = defineConfig({
   projectId: "92gf8q",
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      require('cypress-mochawesome-reporter/plugin')(on)
+      return require("./cypress/plugins/index.js")(on, config);
     },
-    reporter: 'cypress-mochawesome-reporter',
-    reporterOptions: {
-      charts: true,
-      reportPageTitle: 'custom-title',
-      embeddedScreenshots: true,
-      inlineAssets: true,
-      saveAllAttempts: false
-    },
+    baseUrl: "https://example.cypress.io/todo",
+  },
+  env: {
+    SEND_MS_TEAMS_NOTIFICATIONS: true,
+    MS_TEAMS_WEBHOOK_URL: ""
   },
 });
